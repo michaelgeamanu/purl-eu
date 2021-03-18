@@ -80,7 +80,7 @@ jobs:
       - run:
           name: Normalise the recovered JSON-LD files (in the src directory)
           command: |
-            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/json
+            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/src
             $PWD/scripts/pretty-print-jsonfiles.sh /tmp/workspace
       - run:
           name: touch a file
