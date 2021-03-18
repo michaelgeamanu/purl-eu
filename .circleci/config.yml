@@ -82,6 +82,12 @@ jobs:
           command: |
             $PWD/scripts/pretty-print-jsonfiles.sh /tmp/workspace
             mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/json
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/report/.ignore
+            touch /tmp/workspace/json/.ignore
+            touch /tmp/workspace/src/.ignore
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -98,8 +104,12 @@ jobs:
       - run:
           name: Render translation JSON from jsonld
           command: |
-            mkdir translation
+            mkdir -p /tmp/workspace/translation
             $PWD/scripts/render-details.sh /tmp/workspace multilingual
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/translation/.ignore
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -130,12 +140,12 @@ jobs:
       - run:
           name: Render merged JSONLD from jsonld and translationjson
           command: |
-            mkdir report
+            mkdir -p  /tmp/workspace/report
             $PWD/scripts/render-details.sh /tmp/workspace merge
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/.ignore
+            touch /tmp/workspace/report/.ignore
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -174,8 +184,12 @@ jobs:
       - run:
           name: Render example templates
           command: |
-            mkdir examples
+            mkdir -p /tmp/workspace/examples
             $PWD/scripts/render-details.sh /tmp/workspace example
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/examples/.ignore
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -192,6 +206,10 @@ jobs:
           command: |
             $PWD/scripts/render-details.sh /tmp/workspace context
             mkdir -p /tmp/workspace/target
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/target/.ignore
       - run:
           name: List the context files found
           command: |
@@ -212,6 +230,11 @@ jobs:
           command: |
             $PWD/scripts/render-details.sh /tmp/workspace shacl
             mkdir -p /tmp/workspace/target /tmp/workspace/report
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/target/.ignore
+            touch /tmp/workspace/report/.ignore
       - run:
           name: List the shacl files found
           command: find /tmp/workspace/target -name \*-SHACL.jsonld -type f
@@ -261,6 +284,10 @@ jobs:
           name: expand default links
           command: |
             $PWD/scripts/expand-links.sh /tmp/workspace
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/target/.ignore
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
