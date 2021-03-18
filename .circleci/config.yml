@@ -98,6 +98,7 @@ jobs:
       - run:
           name: Render translation JSON from jsonld
           command: |
+            mkdir translation
             $PWD/scripts/render-details.sh /tmp/workspace multilingual
       - persist_to_workspace:
           root: /tmp/workspace
@@ -129,6 +130,7 @@ jobs:
       - run:
           name: Render merged JSONLD from jsonld and translationjson
           command: |
+            mkdir report
             $PWD/scripts/render-details.sh /tmp/workspace merge
       - run:
           name: touch a file
@@ -172,6 +174,7 @@ jobs:
       - run:
           name: Render example templates
           command: |
+            mkdir examples
             $PWD/scripts/render-details.sh /tmp/workspace example
       - persist_to_workspace:
           root: /tmp/workspace
