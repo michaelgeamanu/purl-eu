@@ -294,7 +294,7 @@ jobs:
             - target/
   render-voc-rdf:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: circleci/ruby:2.6.5-stretch
     steps:
       - checkout
       - attach_workspace:
