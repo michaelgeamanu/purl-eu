@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <div style="min-height:44px;;" id="duet-header" class="header">
+  <div style="min-height:44px;;" id="purl-header" class="header">
     <!-- insert your global header here -->
     <title>Duet</title>
     <i class="logo">PurlLogo</i>
@@ -271,7 +271,7 @@
                     <dd>Für diese Entität sind keine Eigenschaften definiert..</dd>
                     {% endif %}
                   </dl>
-                  <dd>Hinterlasse <a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">hier</a> Feedback für diesen Datentyp.</dd>
+                  <dd>Hinterlasse <a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">hier</a> Feedback für diesen Datentyp.</dd>
                 </div>
 		{% if ((entity.properties | length) > 0 ) %}
                 <div class="u-table-overflow">
@@ -291,7 +291,7 @@
                     <tbody class="supertype">
                     {% for prop in entity['properties'] | sort(attribute=sortattr) %}
                       <tr id="{{ (entity.name ~ ':' ~ prop.name) | urlencode }}" typeof="rdfs:Property" resource="{{ prop.uri }}">
-                        <td><a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ prop.name }}&body=Explain%20your%20issue"><i class="icon"></i></a></td>
+                        <td><a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ prop.name }}&body=Explain%20your%20issue"><i class="icon"></i></a></td>
                         <td>
                           <code property="rdfs:label">
                             <a href="{{ prop.uri }}" data-toggle="tooltip" data-content="{{ prop.uri }}" data-placement="right">
@@ -354,7 +354,7 @@
                     <dd>Für diesen Datentyp sind keine Eigenschaften definiert..</dd>
                     {% endif %}
                   </dl>
-                  <dd>Hinterlasse <a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">hier</a> Feedback für diesen Datentyp.</dd>
+                  <dd>Hinterlasse <a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">hier</a> Feedback für diesen Datentyp.</dd>
                 </div>
 		{% if ((entity.properties | length) > 0 ) %}
                 <div class="u-table-overflow">
@@ -374,7 +374,7 @@
                     <tbody class="supertype">
                       {% for prop in entity['properties'] | sort(attribute=sortattr) %}
                       <tr id="{{ (entity.name ~ ':' ~ prop.name ) | urlencode }}" typeof="rdfs:Property" resource="{{ prop.uri }}">
-                        <td><a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ prop.name }}&body=Explain%20your%20issue"><i class="icon"></i></a></td>
+                        <td><a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ prop.name }}&body=Explain%20your%20issue"><i class="icon"></i></a></td>
                         <td>
                           <code property="rdfs:label">
                             <a href="{{ prop.uri }}" data-toggle="tooltip" data-content="{{ prop.uri }}" data-placement="right">{{ prop.label[language] }}</a>

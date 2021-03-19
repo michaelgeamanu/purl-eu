@@ -26,7 +26,7 @@
   </head>
 
   <body class="h-entry" role="document" id="respecDocument">
-      <div style="min-height:44px;;" id="duet-header" class="header">
+      <div style="min-height:44px;;" id="purl-header" class="header">
         <!-- insert your global header here -->
         <title>Duet</title>
         <i class="logo">PurlLogo</i>
@@ -274,7 +274,7 @@
                                 {% for class in classes | sort(attribute=sortattr) %}
                                 <div class="region region--no-space-top">
                                     <h3 class="h3"  id="{{ class.uri | replace(metadata.uri + '#', '') }}">Klasse <em>{{ class.label[language] }}</em></h3>
-                                    <p>Geef <a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">here</a> feedback over deze klasse.</p>
+                                    <p>Geef <a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">here</a> feedback over deze klasse.</p>
                                     <table class="definition">
                                         <tbody>
                                           <tr>
@@ -341,7 +341,7 @@
                                 {% for property in properties | sort(attribute=sortattr) %}
                                 <div class="region region--no-space-top">
                                     <h3 class="h3"  id="{{ property.uri | replace(metadata.uri + '#', '') }}">Eigenschap <em>{{  property.label[language] }}</em></h3>
-                                    <p>Geef <a href="https://github.com/Informatievlaanderen/duet/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">here</a> feedback over deze eigenshap.</p>
+                                    <p>Geef <a href="https://github.com/Informatievlaanderen/purl-eu/issues/new?title=Issue%20for%20{{ entity.name }}&body=Explain%20your%20issue">here</a> feedback over deze eigenshap.</p>
                                     <table class="definition">
                                         <tbody>
                                           <tr>
