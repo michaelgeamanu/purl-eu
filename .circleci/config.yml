@@ -385,7 +385,7 @@ jobs:
           command: |
             mkdir -p /tmp/purl-eu-generated/report
             mkdir -p /tmp/purl-eu-generated/examples
-            rm */.igonre*
+            rm */.ignore*
             if [ -d target ] ; then if [ ! "$(ls -A target)" ] ; then echo "directory target is empty" ; else cp -R target/* /tmp/purl-eu-generated ; fi fi
             if [ -d report ] ; then if [ ! "$(ls -A report)" ] ; then echo "directory report is empty" ; else cp -R report/* /tmp/purl-eu-generated/report ; fi fi
             if [ -d reporthtml ] ; then if [ ! "$(ls -A reporthtml)" ] ; then echo "directory reporthtml is empty" ; else cp -R reporthtml/* /tmp/purl-eu-generated/report ; fi fi
