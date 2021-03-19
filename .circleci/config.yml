@@ -396,7 +396,7 @@ jobs:
           name: List the files which have been created
           command: |
             ls -al /tmp/purl-eu-generated/*
-            if [ -d /tmp/purl-eu-generated/report ] ; then ls -al /tmp/purl-eu-generated/report/* ; fi
+            if [ -d /tmp/purl-eu-generated/report ] ; then if [ ! "$(ls -A /tmp/purl-eu-generated/report)" ] ; then echo "directory target is empty" ; else ls -al /tmp/purl-eu-generated/report/* ; fi fi
             find /tmp/purl-eu-generated/report
       - run:
           name: insert the commit
