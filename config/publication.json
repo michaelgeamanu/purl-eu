@@ -1,3 +1,10 @@
 [
-
+  {
+    "urlref": "/doc/applicatieprofiel/mobiliteit-dienstregeling-en-planning/dienstregeling/ontwerpstandaard/2021-03-04",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
+    "branchtag": "master",
+    "name": "timetables-ap",
+    "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
+    "navigation": {}
+  }
 ]
