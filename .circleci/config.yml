@@ -306,7 +306,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/target/.ignore11
+            touch /tmp/workspace/voc/.ignore11
       - run:
           name: Generate vocabulary in baseformat jsonld
           command: |
