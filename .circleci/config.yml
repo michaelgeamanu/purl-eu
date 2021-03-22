@@ -292,6 +292,30 @@ jobs:
           root: /tmp/workspace
           paths:
             - target/
+  render-voc-jsonld:
+    docker:
+      - image: informatievlaanderen/oslo-specification-generator:multilingual
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Install dependencies
+          command: |
+            mkdir -p /tmp/workspace/voc
+      - run:
+          name: touch a file
+          command: |
+            touch /tmp/workspace/target/.ignore11
+      - run:
+          name: Generate vocabulary in baseformat jsonld
+          command: |
+            mkdir -p /tmp/workspace/target/doc/vocabularium
+            $PWD/scripts/generate-voc.sh /tmp/workspace json $PWD/config
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
+            - voc/
   render-voc-rdf:
     docker:
       - image: circleci/ruby:2.6.5-stretch
@@ -303,13 +327,11 @@ jobs:
           name: Install dependencies
           command: |
             gem install linkeddata
-            mkdir -p /tmp/workspace/voc
             mkdir -p /tmp/workspace/target
       - run:
-          name: Generate vocabulary in baseformat jsonld
+          name: touch a file
           command: |
-            mkdir -p /tmp/workspace/target/doc/vocabularium
-            $PWD/scripts/generate-voc.sh /tmp/workspace json $PWD/config
+            touch /tmp/workspace/target/.ignore12
       - run:
           name: Convert vocabulary to turtle
           command: |
@@ -439,9 +461,12 @@ workflows:
       - render-html-details:
           requires:
             - render-merged-jsonld
-      - render-voc-rdf:
+      - render-voc-jsonld:
           requires:
             - render-merged-jsonld
+      - render-voc-rdf:
+          requires:
+            - render-voc-jsonld
       - render-shacl-details:
           requires:
             - render-merged-jsonld
