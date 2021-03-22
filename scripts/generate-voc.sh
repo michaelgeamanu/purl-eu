@@ -5,13 +5,13 @@ SUBDIR=$2
 CONFIGDIR=$3
 CHECKOUTFILE=${TARGETDIR}/checkouts.txt
 PRIMELANGUAGE=${4-'en'}
-GOALLANGUAGE=${5-'de'}
+GOALLANGUAGE=${5-'nl'}
 
 echo "generate-voc: starting with $1 $2 $3"
 
 #############################################################################################
 make_jsonld() {
-    local FILE=$1 
+    local FILE=$1
     local INPUT=$2
     local TARGET=$3
     local CONFIGDIR=$4
@@ -31,7 +31,7 @@ make_jsonld() {
     else
         echo "RENDER-DETAILS(voc-languageaware): saved to ${OUTPUT}"
         echo "RENDER-DETAILS(voc-languageaware): It will now be concatted and saved to ${TARGET}"
-        
+
          if [ -f ${CONFIGDIR}/ontology.defaults.json ]
         then
             if [ -f /tmp/${FILE}/ontology ]
@@ -58,8 +58,8 @@ mkdir -p ${TARGETDIR}/html
 cat ${CHECKOUTFILE} | while read line
 do
     SLINE=${TARGETDIR}/src/${line}
-    TLINE=${TARGETDIR}/target/${line} 
-    RLINE=${TARGETDIR}/report/${line}   
+    TLINE=${TARGETDIR}/target/${line}
+    RLINE=${TARGETDIR}/report/${line}
     echo "Processing line: ${SLINE} => ${TLINE} ${RLINE}"
     if [ -d "${SLINE}" ]
     then
