@@ -327,7 +327,7 @@ jobs:
           name: Install dependencies
           command: |
             gem install linkeddata
-            mkdir -p /tmp/workspace/target
+            mkdir -p /tmp/workspace/target/doc/vocabularium
       - run:
           name: touch a file
           command: |
