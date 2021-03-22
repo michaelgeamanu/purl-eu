@@ -21,6 +21,7 @@ render_merged_files() {
     COMMANDJSONLD=$(echo '.[].translation | .[] | select(.language | contains("'${LANGUAGE}'")) | .mergefile')
     MERGEDJSONLD=${RLINE}/translation/$(jq -r "${COMMANDJSONLD}" ${SLINE}/.names.json)
     MERGEDJSONLDDIR=$(dirname ${MERGEDJSONLD})
+    echo "check for error $MERGEDJSONLD"
     echo "check for error $MERGEDJSONLDDIR"
     mkdir -p ${MERGEDJSONLDDIR}
 
