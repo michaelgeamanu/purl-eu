@@ -37,11 +37,11 @@ jobs:
       - run:
           name: Show the report (for debugging purposes)
           command: |
-             if [ -d /tmp/workspace/report ] ; then cat /tmp/workspace/report/*.report ; fi
+            if [ -d /tmp/workspace/report ] ; then cat /tmp/workspace/report/*.report ; fi
       - run:
           name: List the files which have been created
           command: |
-             if [ -d /tmp/workspace/report ] ; then ls -al /tmp/workspace/report/* ; fi
+            if [ -d /tmp/workspace/report ] ; then ls -al /tmp/workspace/report/* ; fi
       - run:
           name: Show the errors found (for debugging purposes)
           command:
@@ -85,9 +85,9 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/report/.ignore1
-            touch /tmp/workspace/json/.ignore2
-            touch /tmp/workspace/src/.ignore3
+            touch /tmp/workspace/report/.ignore01
+            touch /tmp/workspace/json/.ignore02
+            touch /tmp/workspace/src/.ignore03
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -95,9 +95,9 @@ jobs:
             - json/
             - src/
   render-translation-json:
-      docker:
+    docker:
       - image: informatievlaanderen/oslo-specification-generator:multilingual
-      steps:
+    steps:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
@@ -109,7 +109,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/translation/.ignore4
+            touch /tmp/workspace/translation/.ignore04
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -131,9 +131,9 @@ jobs:
             egrep " WARNING " /tmp/workspace/report/translation/*.report || true ;
             [ $( egrep " WARNING " /tmp/workspace/report/translation/*.report | wc -l ) == 0 ] || exit 1
   render-merged-jsonld:
-      docker:
+    docker:
       - image: informatievlaanderen/oslo-specification-generator:multilingual
-      steps:
+    steps:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
@@ -145,7 +145,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/report/.ignore5
+            touch /tmp/workspace/report/.ignore05
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -189,7 +189,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/examples/.ignore6
+            touch /tmp/workspace/examples/.ignore06
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -209,7 +209,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/target/.ignore7
+            touch /tmp/workspace/target/.ignore07
       - run:
           name: List the context files found
           command: |
@@ -233,8 +233,8 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/target/.ignore8
-            touch /tmp/workspace/report/.ignore9
+            touch /tmp/workspace/target/.ignore08
+            touch /tmp/workspace/report/.ignore09
       - run:
           name: List the shacl files found
           command: find /tmp/workspace/target -name \*-SHACL.jsonld -type f
@@ -287,7 +287,7 @@ jobs:
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/target/.ignore0
+            touch /tmp/workspace/target/.ignore10
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
