@@ -21,6 +21,7 @@ render_merged_files() {
     COMMANDJSONLD=$(echo '.[].translation | .[] | select(.language | contains("'${LANGUAGE}'")) | .mergefile')
     MERGEDJSONLD=${RLINE}/translation/$(jq -r "${COMMANDJSONLD}" ${SLINE}/.names.json)
     MERGEDJSONLDDIR=$(dirname ${MERGEDJSONLD})
+    echo "check for error $MERGEDJSONLDDIR"
     mkdir -p ${MERGEDJSONLDDIR}
 
     if [ -f "${TRANSLATIONFILE}" ]; then
@@ -97,7 +98,7 @@ render_html() { # SLINE TLINE JSON
 
     BASENAME=$(basename ${JSONI} .jsonld)
     #    OUTFILE=${BASENAME}.html
-    # precendence order: Theme repository > publication repository > tool repository 
+    # precendence order: Theme repository > publication repository > tool repository
     cp -n /app/views/* ${SLINE}/templates
     cp -n ${HOME}/project/templates/* ${SLINE}/templates
     #cp -n ${HOME}/project/templates/icons/* ${SLINE}/templates/icons
@@ -129,11 +130,11 @@ render_html() { # SLINE TLINE JSON
 }
 
 function pretty_print_json() {
-	# echo "pretty_print_json: $1" 
-	if [ -f "$1" ] ; then 
+	# echo "pretty_print_json: $1"
+	if [ -f "$1" ] ; then
 	   jq . $1 > /tmp/pp.json
 	   mv /tmp/pp.json $1
-	fi 
+	fi
 }
 
 render_example_template() { # SLINE TLINE JSON
