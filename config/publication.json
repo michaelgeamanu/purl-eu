@@ -5,11 +5,13 @@
     "branchtag": "master",
     "name": "timetables-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
-    "navigation": {}
+    "navigation": {},
+    "dummy": 1
   },
   {
     "urlref": "/doc/applicatieprofiel/mobiliteit-dienstregeling-en-planning/dienstregeling/",
     "seealso": "/doc/applicatieprofiel/mobiliteit-dienstregeling-en-planning/dienstregeling/ontwerpstandaard/2021-03-04",
-    "type": "ap"
+    "type": "ap",
+    "dummy": 1
   }
 ]
