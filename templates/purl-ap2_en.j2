@@ -51,7 +51,7 @@
 
               <div class="head" role="status" id="status">
               <dl>
-              <dt>Status</dt><dd><a href="{{metadata.status}}">{{metadata.status}}</a></dd>
+              <dt>Status</dt><dd>{{metadata.status}}</dd>
               <dt>Published at</dt><dd>{{metadata.issued}}</dd>
               <dt>This version</dt><dd><a href="{{metadata.navigation.self}}">{{metadata.navigation.self}}</a></dd>
               {% if metadata.navigation.next %}
@@ -185,7 +185,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 {% block status %}
                 <p>
-                  This application profile has the status of {{ metadata.statuslabel }} publisehd on {{ metadata.issued }}.
+                  This application profile has the status of {{ metadata.status }} published on {{ metadata.issued }}.
 	        </p><p>
 		  Information about the process and the decisions involved in the creation of this specification are consultable at the
 		  <a href="{{metadata.standaardregisterurl}}">registry of standards</a>.
