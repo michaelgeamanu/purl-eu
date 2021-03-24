@@ -3,7 +3,7 @@
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
     "type": "ap",
-    "dummy": "dimi-3"
+    "dummy": "dimi-4"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
@@ -12,13 +12,13 @@
     "name": "stopplaces-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-3"
+    "dummy": "dimi-4"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-03-25",
     "type": "ap",
-    "dummy": "dimi-3"
+    "dummy": "dimi-4"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-03-25",
@@ -27,6 +27,6 @@
     "name": "timetables-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-3"
+    "dummy": "dimi-4"
   }
 ]
