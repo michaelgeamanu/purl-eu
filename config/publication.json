@@ -1,12 +1,12 @@
 [
   {
-    "urlref": "/doc/application-profile/netex-belgium/stopplaces-ap/",
-    "seealso": "/doc/application-profile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
+    "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
+    "seealso": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
     "type": "ap",
     "dummy": "dimi-3"
   },
   {
-    "urlref": "/doc/application-profile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
+    "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-03-25",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "stopplaces-ap",
@@ -15,13 +15,13 @@
     "dummy": "dimi-3"
   },
   {
-    "urlref": "/doc/application-profile/netex-belgium/timetables-ap/",
-    "seealso": "/doc/application-profile/netex-belgium/timetables-ap/working-draft/2021-03-25",
+    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
+    "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-03-25",
     "type": "ap",
     "dummy": "dimi-3"
   },
   {
-    "urlref": "/doc/application-profile/netex-belgium/timetables-ap/working-draft/2021-03-25",
+    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-03-25",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "timetables-ap",
