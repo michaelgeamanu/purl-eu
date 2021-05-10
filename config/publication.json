@@ -6,13 +6,13 @@
     "dummy": "008"
   },
   {
-    "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-06-01",
+    "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "vehiclescheduling-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "008"
+    "dummy": "009"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
