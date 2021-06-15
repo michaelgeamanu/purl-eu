@@ -33,7 +33,7 @@
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-15",
     "type": "ap",
-    "dummy": "dimi-9"
+    "dummy": "dimi-10"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-15",
@@ -42,7 +42,7 @@
     "name": "timetables-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-9"
+    "dummy": "dimi-10"
   },
   {
     "urlref": "/doc/applicationprofile/AirandWater/Core//2021-04-30",
