@@ -3,7 +3,7 @@
     "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
     "type": "ap",
-    "dummy": "dimi-6"
+    "dummy": "dimi-12"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
@@ -12,13 +12,13 @@
     "name": "vehiclescheduling-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-6"
+    "dummy": "dimi-12"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-06-01",
     "type": "ap",
-    "dummy": "dimi-6"
+    "dummy": "dimi-12"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-06-01",
@@ -27,22 +27,22 @@
     "name": "stopplaces-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-6"
+    "dummy": "dimi-12"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
-    "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-15",
+    "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
     "type": "ap",
-    "dummy": "dimi-11"
+    "dummy": "dimi-12"
   },
   {
-    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-15",
+    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "timetables-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-11"
+    "dummy": "dimi-12"
   },
   {
     "urlref": "/doc/applicationprofile/AirandWater/Core//2021-04-30",
