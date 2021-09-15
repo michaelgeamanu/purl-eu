@@ -50,7 +50,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Core-ap",
     "filename": "config/OSLO-AirAndWater-Core-AP.json",
-    "dummy":"001"
+    "dummy":"002"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Air/ontwerpstandaard/2021-04-16",
@@ -58,7 +58,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Air-ap",
     "filename": "config/OSLO-AirAndWater-Air-AP.json",
-    "dummy":"001"
+    "dummy":"002"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Water/ontwerpstandaard/2021-04-16",
@@ -66,6 +66,24 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-Water-AP.json",
-    "dummy":"001"
+    "dummy":"002"
+  },
+  {
+    "urlref": "/doc/applicationprofile/AirAndWater/Core/",
+    "seealso": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16",
+    "type": "ap",
+    "dummy": "001"
+  },
+  {
+    "urlref": "/doc/applicationprofile/AirAndWater/Air/",
+    "seealso": "/doc/applicationprofile/AirAndWater/Air/ontwerpstandaard/2021-04-16",
+    "type": "ap",
+    "dummy": "001"
+  },
+  {
+    "urlref": "/doc/applicationprofile/AirAndWater/Water/",
+    "seealso": "/doc/applicationprofile/AirAndWater/Water/ontwerpstandaard/2021-04-16",
+    "type": "ap",
+    "dummy": "001"
   }
 ]
