@@ -47,19 +47,19 @@
       tag: "label",
       property: "http://www.w3.org/2000/01/rdf-schema#label",
       lang: "en",
-      fallbackTags: ["ap-label-en", "label-en"]
+      fallbackTags: ["ap-label-en", "label-en", "ap-label-nl", "label-nl"]
     },
     {
       tag: "definition",
       property: "http://www.w3.org/2000/01/rdf-schema#comment",
       lang: "en",
-      fallbackTags: ["ap-definition-en","definition-en"]
+      fallbackTags: ["ap-definition-en","definition-en", "ap-definition-nl", "definition-nl"]
     },
     {
       tag: "usage",
       property: "http://www.w3.org/2004/02/skos/core#scopeNote",
       lang: "en",
-      fallbackTags: ["ap-usageNote-en", "usageNote-en"]
+      fallbackTags: ["ap-usageNote-en", "usageNote-en", "ap-usageNote-nl", "usageNote-nl"]
     },
     {
       tag: "ap-label-en",
