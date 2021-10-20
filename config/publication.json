@@ -53,6 +53,14 @@
     "dummy":"017"
   },
   {
+    "urlref": "/doc/vocabulary/AirAndWater/Air/ontwerpstandaard/2021-10-01",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
+    "branchtag": "master",
+    "name": "OSLO-airAndWater-Air-voc",
+    "filename": "config/OSLO-AirAndWater-VOC.json",
+    "dummy":"001"
+  },  
+  {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
