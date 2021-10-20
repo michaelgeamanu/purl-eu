@@ -49,7 +49,7 @@
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
     "name": "OSLO-airAndWater-Core-voc",
-    "filename": "config/OSLO-AirAndWater-Core-VOC.json",
+    "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"016"
   },
   {
