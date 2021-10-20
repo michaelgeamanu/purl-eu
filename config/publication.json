@@ -58,7 +58,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Air-voc",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"005"
+    "dummy":"006"
   },  
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-10-01",
