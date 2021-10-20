@@ -74,7 +74,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Air-ap",
     "filename": "config/OSLO-AirAndWater-Air-AP.json",
-    "dummy":"021"
+    "dummy":"022"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Water/ontwerpstandaard/2021-10-01",
@@ -82,7 +82,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-Water-AP.json",
-    "dummy":"021"
+    "dummy":"022"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16",
