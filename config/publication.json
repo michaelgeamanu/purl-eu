@@ -58,7 +58,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Air-voc",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"011"
+    "dummy":"012"
   },
   {
     "urlref": "/doc/vocabulary/AirAndWater/Water/ontwerpstandaard/2021-10-01",
@@ -66,8 +66,26 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Water-voc",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"003"
-  },  
+    "dummy":"005"
+  },
+   {
+    "urlref": "/ns/AirAndWater/Core",
+    "seealso": "/doc/vocabulary/AirAndWater/Core/ontwerpstandaard/2021-10-01",
+    "type": "voc",
+    "dummy": "001"
+  },
+     {
+    "urlref": "/ns/AirAndWater/Air",
+    "seealso": "/doc/vocabulary/AirAndWater/Air/ontwerpstandaard/2021-10-01",
+    "type": "voc",
+    "dummy": "001"
+  },
+  {
+    "urlref": "/ns/AirAndWater/Water",
+    "seealso": "/doc/vocabulary/AirAndWater/Water/ontwerpstandaard/2021-10-01",
+    "type": "voc",
+    "dummy": "001"
+  },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
