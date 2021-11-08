@@ -310,7 +310,7 @@ jobs:
       - run:
           name: Generate vocabulary in baseformat jsonld
           command: |
-            mkdir -p /tmp/workspace/target/doc/vocabularium
+            mkdir -p /tmp/workspace/target/doc/vocabulary
             $PWD/scripts/generate-voc.sh /tmp/workspace json $PWD/config
       - persist_to_workspace:
           root: /tmp/workspace
@@ -327,7 +327,7 @@ jobs:
           name: Install dependencies
           command: |
             gem install linkeddata
-            mkdir -p /tmp/workspace/target/doc/vocabularium
+            mkdir -p /tmp/workspace/target/doc/vocabulary
       - run:
           name: touch a file
           command: |
