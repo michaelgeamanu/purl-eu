@@ -317,7 +317,7 @@ jobs:
           paths:
             - voc/
             - target/
-            - report/
+#            - report/
   render-voc-rdf:
     docker:
       - image: circleci/ruby:2.6.5-stretch
