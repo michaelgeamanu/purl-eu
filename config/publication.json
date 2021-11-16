@@ -73,24 +73,24 @@
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
     "name": "OSLO-airAndWater-Core-ap",
-    "filename": "config/OSLO-AirAndWater-Core-AP.json",
-    "dummy":"036"
+    "filename": "config/OSLO-AirAndWater-AP.json",
+    "dummy":"037"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Air/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
     "name": "OSLO-airAndWater-Air-ap",
-    "filename": "config/OSLO-AirAndWater-Air-AP.json",
-    "dummy":"025"
+    "filename": "config/OSLO-AirAndWater-AP.json",
+    "dummy":"026"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Water/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
     "name": "OSLO-airAndWater-Water-ap",
-    "filename": "config/OSLO-AirAndWater-Water-AP.json",
-    "dummy":"025"
+    "filename": "config/OSLO-AirAndWater-AP.json",
+    "dummy":"026"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16",
