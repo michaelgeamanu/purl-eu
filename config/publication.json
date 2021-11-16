@@ -50,7 +50,7 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Core-voc",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"020"
+    "dummy":"021"
   },
   {
     "urlref": "/doc/vocabulary/AirAndWater/Air/ontwerpstandaard/2021-10-01",
@@ -138,7 +138,7 @@
     "urlref": "/ns/AirAndWater/Core/",
     "seealso": "/doc/vocabulary/AirAndWater/Core/ontwerpstandaard/2021-10-01",
     "type": "voc",
-    "dummy": "001"
+    "dummy": "002"
   },
   {
     "urlref": "/ns/AirAndWater/Air/",
