@@ -45,26 +45,26 @@
     "dummy": "dimi-12"
   },
   {
-    "urlref": "/doc/vocabulary/AirAndWater/Core/ontwerpstandaard/2021-10-01",
+    "urlref": "/doc/vocabulary/air-and-water/core/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
-    "name": "OSLO-airAndWater-Core-voc",
+    "name": "core",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"021"
   },
   {
-    "urlref": "/doc/vocabulary/AirAndWater/Air/ontwerpstandaard/2021-10-01",
+    "urlref": "/doc/vocabulary/air-and-water/air/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
-    "name": "OSLO-airAndWater-Air-voc",
+    "name": "air",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"016"
   },
   {
-    "urlref": "/doc/vocabulary/AirAndWater/Water/ontwerpstandaard/2021-10-01",
+    "urlref": "/doc/vocabulary/air-and-water/water/ontwerpstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
     "branchtag": "master",
-    "name": "OSLO-airAndWater-Water-voc",
+    "name": "water",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"016"
   },
@@ -135,20 +135,20 @@
     "dummy": "001"
   },
   {
-    "urlref": "/ns/AirAndWater/Core/",
-    "seealso": "/doc/vocabulary/AirAndWater/Core/ontwerpstandaard/2021-10-01",
+    "urlref": "/ns/air-and-water/core/",
+    "seealso": "/doc/vocabulary/air-and-water/core/ontwerpstandaard/2021-10-01",
     "type": "voc",
     "dummy": "002"
   },
   {
-    "urlref": "/ns/AirAndWater/Air/",
-    "seealso": "/doc/vocabulary/AirAndWater/Air/ontwerpstandaard/2021-10-01",
+    "urlref": "/ns/air-and-water/air/",
+    "seealso": "/doc/vocabulary/air-and-water/air/ontwerpstandaard/2021-10-01",
     "type": "voc",
     "dummy": "001"
   },
   {
-    "urlref": "/ns/AirAndWater/Water/",
-    "seealso": "/doc/vocabulary/AirAndWater/Water/ontwerpstandaard/2021-10-01",
+    "urlref": "/ns/air-and-water/water/",
+    "seealso": "/doc/vocabulary/air-and-water/water/ontwerpstandaard/2021-10-01",
     "type": "voc",
     "dummy": "001"
   }
