@@ -3,7 +3,8 @@
     "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
     "type": "ap",
-    "dummy": "dimi-12"
+    "dummy": "dimi-12",
+    "disabled": true
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
@@ -12,7 +13,8 @@
     "name": "vehiclescheduling-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-12"
+    "dummy": "dimi-12",
+    "disabled": true
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
@@ -33,7 +35,8 @@
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
     "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
     "type": "ap",
-    "dummy": "dimi-12"
+    "dummy": "dimi-12",
+    "disabled": true
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
@@ -42,7 +45,8 @@
     "name": "timetables-ap",
     "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
     "navigation": {},
-    "dummy": "dimi-12"
+    "dummy": "dimi-12",
+    "disabled": true
   },
   {
     "urlref": "/doc/vocabulary/air-and-water/core/ontwerpstandaard/2021-10-01",
@@ -50,7 +54,8 @@
     "branchtag": "master",
     "name": "core",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"021"
+    "dummy":"021",
+    "disabled": true
   },
   {
     "urlref": "/doc/vocabulary/air-and-water/air/ontwerpstandaard/2021-10-01",
@@ -90,7 +95,8 @@
     "branchtag": "master",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
-    "dummy":"029"
+    "dummy":"029",
+    "disabled": true
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16",
