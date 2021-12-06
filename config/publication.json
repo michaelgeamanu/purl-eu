@@ -151,7 +151,7 @@
     "repository": "https://github.com/bertvannuffelen/semiceuthema",
     "branchtag": "master",
     "name": "iceg_public_organization",
-    "filename": "config/iceg-public-service.json",
+    "filename": "config/iceg-public-organisation.json",
     "dummy":"002"
   }
 ]
