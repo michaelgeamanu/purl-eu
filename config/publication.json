@@ -117,6 +117,14 @@
     "dummy":"002"
   },
   {
+    "urlref": "/doc/applicationprofile/Consent/ontwerpstandaard/2022-01-11",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
+    "branchtag": "master",
+    "name": "OSLO-consent-ap",
+    "filename": "config/consent-ap.json",
+    "dummy":"001"
+  },
+  {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
     "seealso": "/doc/applicationprofile/AirAndWater/Core/kandidaatstandaard/2021-10-01",
     "type": "ap",
