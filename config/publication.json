@@ -122,7 +122,7 @@
     "branchtag": "master",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"007"
+    "dummy":"008"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
