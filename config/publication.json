@@ -122,7 +122,15 @@
     "branchtag": "master",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"008"
+    "dummy":"009"
+  },
+  {
+    "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-11",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
+    "branchtag": "master",
+    "name": "OSLO-consent-voc",
+    "filename": "config/consent-voc.json",
+    "dummy":"001"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
