@@ -122,7 +122,7 @@
     "branchtag": "master",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"011"
+    "dummy":"012"
   },
   {
     "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-11",
@@ -130,7 +130,7 @@
     "branchtag": "master",
     "name": "OSLO-consent-voc",
     "filename": "config/consent-voc.json",
-    "dummy":"002"
+    "dummy":"003"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
