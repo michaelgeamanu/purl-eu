@@ -117,7 +117,7 @@
     "dummy":"002"
   },
   {
-    "urlref": "/doc/applicationprofile/Consent/ontwerpstandaard/2022-01-11",
+    "urlref": "/doc/applicationprofile/Consent/ontwerpstandaard/2022-01-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
     "branchtag": "master",
     "name": "OSLO-consent-ap",
@@ -125,7 +125,7 @@
     "dummy":"015"
   },
   {
-    "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-11",
+    "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
     "branchtag": "master",
     "name": "OSLO-consent-voc",
