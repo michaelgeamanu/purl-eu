@@ -117,7 +117,7 @@
     "dummy":"002"
   },
   {
-    "urlref": "/doc/applicationprofile/Consent/ontwerpstandaard/2022-01-21",
+    "urlref": "/doc/applicationprofile/consent/ontwerpstandaard/2022-01-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
     "branchtag": "master",
     "name": "OSLO-consent-ap",
