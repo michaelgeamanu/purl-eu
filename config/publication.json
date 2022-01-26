@@ -47,7 +47,7 @@
   {
     "urlref": "/doc/vocabulary/air-and-water/core/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "core",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"029"
@@ -55,7 +55,7 @@
   {
     "urlref": "/doc/vocabulary/air-and-water/air/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "air",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"023"
@@ -63,7 +63,7 @@
   {
     "urlref": "/doc/vocabulary/air-and-water/water/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "water",
     "filename": "config/OSLO-AirAndWater-VOC.json",
     "dummy":"023"
@@ -71,7 +71,7 @@
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "OSLO-airAndWater-Core-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
     "dummy":"051"
@@ -79,7 +79,7 @@
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Air/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "OSLO-airAndWater-Air-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
     "dummy":"033"
@@ -87,7 +87,7 @@
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Water/kandidaatstandaard/2021-10-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-airAndWater",
-    "branchtag": "kandidaat-2021-10-01",
+    "branchtag": "master",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
     "dummy":"038"
