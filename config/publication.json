@@ -125,12 +125,24 @@
     "dummy":"029"
   },
   {
+    "urlref": "/doc/applicationprofile/consent/",
+    "seealso": "/doc/applicationprofile/consent/ontwerpstandaard/2022-01-21",
+    "type": "ap",
+    "dummy": "009"
+  },
+  {
     "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-consent",
     "branchtag": "master",
     "name": "OSLO-consent-voc",
     "filename": "config/consent-voc.json",
     "dummy":"018"
+  },
+  {
+    "urlref": "/ns/consent/",
+    "seealso": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-21",
+    "type": "voc",
+    "dummy": "008"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
