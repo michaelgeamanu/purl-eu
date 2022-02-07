@@ -140,13 +140,13 @@
     "branchtag": "master",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"032"
+    "dummy":"033"
   },
   {
     "urlref": "/doc/applicationprofile/consent/",
     "seealso": "/doc/applicationprofile/consent/ontwerpstandaard/2022-01-21",
     "type": "ap",
-    "dummy": "012"
+    "dummy": "013"
   },
   {
     "urlref": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-21",
@@ -154,13 +154,13 @@
     "branchtag": "master",
     "name": "OSLO-consent-voc",
     "filename": "config/consent-voc.json",
-    "dummy":"021"
+    "dummy":"022"
   },
   {
     "urlref": "/ns/consent/",
     "seealso": "/doc/vocabulary/consent/ontwerpstandaard/2022-01-21",
     "type": "voc",
-    "dummy": "011"
+    "dummy": "012"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/",
