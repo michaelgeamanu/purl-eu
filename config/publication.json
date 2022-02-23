@@ -197,5 +197,14 @@
     "seealso": "/doc/vocabulary/air-and-water/water/kandidaatstandaard/2021-10-01",
     "type": "voc",
     "dummy": "005"
+  },
+  {
+    "urlref": "/ns/publicorganization/",
+    "repository": "https://github.com/bertvannuffelen/semiceuthema",
+    "branchtag": "master",
+    "name": "iceg-public-organisation",
+    "filename": "config/iceg-public-organisation-voc.json",
+    "navigation": {},
+    "dummy":"016"
   }
 ]
