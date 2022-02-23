@@ -140,7 +140,7 @@
     "branchtag": "kandidaat-2022-02-23",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"036"
+    "dummy":"037"
   },
   {
     "urlref": "/doc/applicationprofile/consent/",
@@ -154,7 +154,7 @@
     "branchtag": "kandidaat-2022-02-23",
     "name": "OSLO-consent-voc",
     "filename": "config/consent-voc.json",
-    "dummy":"024"
+    "dummy":"025"
   },
   {
     "urlref": "/ns/consent/",
