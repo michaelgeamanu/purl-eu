@@ -205,6 +205,7 @@
     "name": "iceg-public-organisation",
     "filename": "config/iceg-public-organisation-voc.json",
     "navigation": {},
+    "disabled": true,
     "dummy":"016"
   }
 ]
