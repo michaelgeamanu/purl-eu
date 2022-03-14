@@ -74,7 +74,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "OSLO-airAndWater-Core-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
-    "dummy":"051",
+    "dummy":"052",
     "navigation": {
       "prev": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16"
     }
