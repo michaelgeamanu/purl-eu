@@ -1,5 +1,35 @@
 [
   {
+    "urlref": "/ns/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "type": "voc",
+    "dummy": "1"
+  },
+  {
+    "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
+    "branchtag": "master",
+    "name": "passenger-transport-hubs-voc",
+    "filename": "config/OSLO-PassengerTransportHubs-VOC.json",
+    "navigation": {},
+    "dummy": "1"
+  },
+{
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "type": "ap",
+    "dummy": "1"
+  },
+  {
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
+    "branchtag": "master",
+    "name": "passenger-transport-hubs-ap",
+    "filename": "config/OSLO-PassengerTransportHubs-AP.json",
+    "navigation": {},
+    "dummy": "1"
+  },
+  {
     "urlref": "/ns/mobility/timetables-and-planning/",
     "seealso": "/doc/vocabulary/mobility/timetables-and-planning/candidate-standard/2022-03-17",
     "type": "voc",
