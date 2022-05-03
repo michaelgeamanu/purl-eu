@@ -3,31 +3,31 @@
     "urlref": "/ns/mobility/passenger-transport-hubs/",
     "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "voc",
-    "dummy": "1"
+    "dummy": "3"
   },
   {
     "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
     "branchtag": "master",
-    "name": "passenger-transport-hubs-voc",
-    "filename": "config/OSLO-PassengerTransportHubs-VOC.json",
+    "name": "OSLO-PassengerTransportHubs-VOC",
+    "filename": "config/passenger-transport-hubs-voc.json",
     "navigation": {},
-    "dummy": "1"
+    "dummy": "3"
   },
 {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
     "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "ap",
-    "dummy": "1"
+    "dummy": "3"
   },
   {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
     "branchtag": "master",
-    "name": "passenger-transport-hubs-ap",
-    "filename": "config/OSLO-PassengerTransportHubs-AP.json",
+    "name": "OSLO-PassengerTransportHubs-AP",
+    "filename": "config/passenger-transport-hubs-ap.json",
     "navigation": {},
-    "dummy": "1"
+    "dummy": "3"
   },
   {
     "urlref": "/ns/mobility/timetables-and-planning/",
