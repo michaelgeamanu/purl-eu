@@ -1,7 +1,7 @@
 {
-    "dcterms:license" : "https://creativecommons.org/licenses/by/4.0/",
-    "dcterms:mediator" : { "foaf:homepage" : "https://semic.eu",
-		           "foaf:mbox" : "mailto: contact@semic.eu",
-			   "foaf:name" : "Semantic Interoperability Community (SEMIC)" 
+    "dcterms:license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+    "dcterms:mediator" : { "foaf:homepage" : "https://data.specs.org",
+		           "foaf:mbox" : "mailto:info@data.specs.org",
+			   "foaf:name" : "Data Specifications Organisation" 
     }
 }

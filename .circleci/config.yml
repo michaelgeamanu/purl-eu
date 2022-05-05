@@ -1,13 +1,99 @@
-version: 2
+version: 2.1
+
+commands:
+  checkout-repositories:
+    description: "checkout the repositories and set correct publishing url"
+    parameters:
+      production_branch:
+        type: string
+        default: master
+      test_branch:
+        type: string
+        default: test
+      other_hostname:
+        type: string
+      test_hostname:
+        type: string
+      production_hostname:
+        type: string
+    steps:
+      - when:
+          condition:
+            equal: [ << pipeline.git.branch >>, <<parameters.production_branch>> ]
+          steps:
+            - run:
+                command: $PWD/scripts/checkoutRepositories.sh /tmp/workspace $PWD/config/publication.json $PWD/config
+                environment:
+                  HOSTNAME: <<parameters.production_hostname>>
+      - when:
+          condition:
+            equal: [ << pipeline.git.branch >>,<<parameters.test_branch>> ]
+          steps:
+            - run:
+                command: $PWD/scripts/checkoutRepositories.sh /tmp/workspace $PWD/config/publication.json $PWD/config
+                environment:
+                  HOSTNAME: <<parameters.test_hostname>>
+      - unless:
+          condition:
+            or:
+              - equal: [ << pipeline.git.branch >>,<<parameters.test_branch>> ]
+              - equal: [ << pipeline.git.branch >>,<<parameters.production_branch>> ]
+          steps:
+            - run:
+                command: $PWD/scripts/checkoutRepositories.sh /tmp/workspace $PWD/config/publication.json $PWD/config
+                environment:
+                  HOSTNAME: <<parameters.other_hostname>>
 jobs:
   checkout:
+    parameters:
+      production_branch:
+        type: string
+        default: master
+      test_branch:
+        type: string
+        default: test
+      production_folder:
+        type: string
+        default: production
+      test_folder:
+        type: string
+        default: test
+      other_folder:
+        type: string
+        default: dev
+      other_hostname:
+        type: string
+      test_hostname:
+        type: string
+      production_hostname:
+        type: string
     docker:
       - image: circleci/python
+    environment:
+      PRODUCTION_BRANCH: <<parameters.production_branch>>
+      TEST_BRANCH: <<parameters.test_branch>>
+      PRODUCTION_FOLDER: <<parameters.production_folder>>
+      TEST_FOLDER: <<parameters.test_folder>>
+      OTHER_FOLDER: <<parameters.other_folder>>
     steps:
       - checkout
+#      - add_ssh_keys:
+#          fingerprints:
+#            - "$$SSHKEYFINGERPRINT"
+#      - run:
+#          name: update and add extra statements of updating the ssh config for each private ssh key
+#          command: |
+#            $PWD/scripts/update_sshconfig.sh private1
       - run: mkdir -p workspace
       - run: ls -al workspace
-      - run: $PWD/scripts/checkout.sh /tmp/workspace $PWD/config/publication.json
+      - run:
+          command: $PWD/scripts/findPublicationsToUpdate.sh /tmp/workspace $PWD/config/publication.json $PWD/
+      - checkout-repositories:
+          production_branch: <<parameters.production_branch>>
+          test_branch: <<parameters.test_branch>>
+          other_hostname: <<parameters.other_hostname>>
+          test_hostname: <<parameters.test_hostname>>
+          production_hostname: <<parameters.production_hostname>>
       - run: if [ -e /tmp/workspace/checkouts.txt ] ; then cat /tmp/workspace/checkouts.txt ; fi
       - run: if [ -e /tmp/workspace/rawcheckouts.txt ] ; then cat /tmp/workspace/rawcheckouts.txt ; fi
       - run: if [ -e /home/circleci/project/changes.txt ] ; then cat /home/circleci/project/changes.txt ; fi
@@ -69,25 +155,16 @@ jobs:
             [ $( egrep " ERROR " /tmp/workspace/report/*.report | wc -l ) == 0 ] || exit 1
   normalise-jsonld:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:j1.4-circleci
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
       - run:
-          name: Make sure pretty print is runnable
-          command: cd /app/pretty-print ; sudo npm install
-      - run:
           name: Normalise the recovered JSON-LD files (in the src directory)
           command: |
             $PWD/scripts/pretty-print-jsonfiles.sh /tmp/workspace
-            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/src
-      - run:
-          name: touch a file
-          command: |
-            touch /tmp/workspace/report/.ignore01
-            touch /tmp/workspace/json/.ignore02
-            touch /tmp/workspace/src/.ignore03
+            mkdir -p /tmp/workspace/report /tmp/workspace/json /tmp/workspace/json
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -96,16 +173,21 @@ jobs:
             - src/
   render-translation-json:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
       - run:
+          name: upgrade configs to this toolchain
+          command: |
+            mkdir -p /tmp/workspace/translation
+            $PWD/scripts/upgrade_config.sh /tmp/workspace $PWD/config
+      - run:
           name: Render translation JSON from jsonld
           command: |
             mkdir -p /tmp/workspace/translation
-            $PWD/scripts/render-details.sh /tmp/workspace multilingual
+            $PWD/scripts/render-details.sh /tmp/workspace multilingual $PWD/config
       - run:
           name: touch a file
           command: |
@@ -114,9 +196,10 @@ jobs:
           root: /tmp/workspace
           paths:
             - translation/
+            - src/
   validate-and-generate-translation-report:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -124,7 +207,7 @@ jobs:
       - run:
           name: generate the reports
           command: |
-            $PWD/scripts/render-details.sh /tmp/workspace report
+            $PWD/scripts/render-details.sh /tmp/workspace report $PWD/config
       - run:
           name: Check no warnings found in the reports
           command:
@@ -132,7 +215,7 @@ jobs:
             [ $( egrep " WARNING " /tmp/workspace/report/translation/*.report | wc -l ) == 0 ] || exit 1
   render-merged-jsonld:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -141,7 +224,7 @@ jobs:
           name: Render merged JSONLD from jsonld and translationjson
           command: |
             mkdir -p  /tmp/workspace/report
-            $PWD/scripts/render-details.sh /tmp/workspace merge
+            $PWD/scripts/render-details.sh /tmp/workspace merge $PWD/config
       - run:
           name: touch a file
           command: |
@@ -152,7 +235,7 @@ jobs:
             - report/
   render-html-details:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -160,8 +243,8 @@ jobs:
       - run:
           name: Render HTML version of merged json file (a)
           command: |
-            $PWD/scripts/render-details.sh /tmp/workspace html
             mkdir -p /tmp/workspace/target /tmp/workspace/reporthtml
+            $PWD/scripts/render-details.sh /tmp/workspace html $PWD/config
       - run:
           name: copy the site-skeleton for the html
           command: $PWD/scripts/copy_skeleton.sh
@@ -176,7 +259,7 @@ jobs:
             - reporthtml/
   render-example-templates:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -185,7 +268,7 @@ jobs:
           name: Render example templates
           command: |
             mkdir -p /tmp/workspace/examples
-            $PWD/scripts/render-details.sh /tmp/workspace example
+            $PWD/scripts/render-details.sh /tmp/workspace example $PWD/config
       - run:
           name: touch a file
           command: |
@@ -196,7 +279,7 @@ jobs:
             - examples/
   render-context-details:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -204,12 +287,8 @@ jobs:
       - run:
           name: Render Context Details
           command: |
-            $PWD/scripts/render-details.sh /tmp/workspace context
+            $PWD/scripts/render-details.sh /tmp/workspace context $PWD/config
             mkdir -p /tmp/workspace/target
-      - run:
-          name: touch a file
-          command: |
-            touch /tmp/workspace/target/.ignore07
       - run:
           name: List the context files found
           command: |
@@ -220,7 +299,7 @@ jobs:
             - target/
   render-shacl-details:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -228,8 +307,8 @@ jobs:
       - run:
           name: Render Shacl details
           command: |
-            $PWD/scripts/render-details.sh /tmp/workspace shacl
             mkdir -p /tmp/workspace/target /tmp/workspace/report
+            $PWD/scripts/render-details.sh /tmp/workspace shacl $PWD/config
       - run:
           name: touch a file
           command: |
@@ -245,7 +324,7 @@ jobs:
             - report/
   convert-json-to-ttl:
     docker:
-      - image: circleci/ruby:2.6.5-stretch
+      - image: circleci/ruby:3.0.2-buster
     steps:
       - checkout
       - attach_workspace:
@@ -283,18 +362,14 @@ jobs:
       - run:
           name: expand default links
           command: |
-            $PWD/scripts/expand-links.sh /tmp/workspace
-      - run:
-          name: touch a file
-          command: |
-            touch /tmp/workspace/target/.ignore10
+            $PWD/scripts/expand-links.sh /tmp/workspace $PWD/config
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
             - target/
   render-voc-jsonld:
     docker:
-      - image: informatievlaanderen/oslo-specification-generator:multilingual
+      - image: informatievlaanderen/oslo-specification-generator:multilingual-dev
     steps:
       - checkout
       - attach_workspace:
@@ -329,11 +404,11 @@ jobs:
           name: Install dependencies
           command: |
             gem install linkeddata
-            mkdir -p /tmp/workspace/terget/doc/vocabulary
+            mkdir -p /tmp/workspace/target/doc/vocabulary
       - run:
           name: touch a file
           command: |
-            touch /tmp/workspace/report/.ignore12
+            touch /tmp/workspace/target/.ignore12
       - run:
           name: Convert vocabulary to turtle
           command: |
@@ -364,7 +439,7 @@ jobs:
       - run:
           name: List the files which should have been created
           command: |
-             if [ -d /tmp/workspace/raw-input ] ; then ls -al /tmp/workspace/raw-input ; fi
+            if [ -d /tmp/workspace/raw-input ] ; then ls -al /tmp/workspace/raw-input ; fi
       - run:
           name: copy /raw-input to where it is needed
           command: $PWD/scripts/extract-raw.sh raw
@@ -377,6 +452,9 @@ jobs:
           paths:
             - raw/
   create-artifact:
+    parameters:
+      repository:
+        type: string
     docker:
       - image: circleci/node
     steps:
@@ -390,46 +468,45 @@ jobs:
           name: Checkout target repo
           workdir: /tmp
           command: |
-            rm -rf purl-eu-generated
-            git clone git@github.com:/Informatievlaanderen/purl-eu-generated.git
+            rm -rf generated
+            git clone <<parameters.repository>> generated
       - run:
           name: clean the generated directory
-          workdir: /tmp/purl-eu-generated
+          workdir: /tmp/generated
           command: |
             git fetch origin
-            #git checkout -b "${CIRCLE_BRANCH}" --track "origin/${CIRCLE_BRANCH}"
+            git checkout -b "${CIRCLE_BRANCH}" --track "origin/${CIRCLE_BRANCH}" || git checkout "${CIRCLE_BRANCH}"
             if [ "`cat /tmp/workspace/haschangedpublications.json`" == "false" ] ; then git rm -r --force * ; fi
       - run:
           name: Copy static assets
           command: |
-            cp -R site-skeleton/* /tmp/purl-eu-generated/
+            cp -R site-skeleton/* /tmp/generated/
       - run:
           name: Copy generated assets
           workdir: /tmp/workspace
           command: |
-            mkdir -p /tmp/purl-eu-generated/report
-            mkdir -p /tmp/purl-eu-generated/examples
-            rm */.ignore*
-            if [ -d target ] ; then if [ ! "$(ls -A target)" ] ; then echo "directory target is empty" ; else cp -R target/* /tmp/purl-eu-generated ; fi fi
-            if [ -d report ] ; then if [ ! "$(ls -A report)" ] ; then echo "directory report is empty" ; else cp -R report/* /tmp/purl-eu-generated/report ; fi fi
-            if [ -d reporthtml ] ; then if [ ! "$(ls -A reporthtml)" ] ; then echo "directory reporthtml is empty" ; else cp -R reporthtml/* /tmp/purl-eu-generated/report ; fi fi
-            if [ -d translation ] ; then if [ ! "$(ls -A translation)" ] ; then echo "directory translation is empty" ; else cp -R translation/* /tmp/purl-eu-generated/report ; fi fi
-            if [ -d json ] ; then if [ ! "$(ls -A json)" ] ; then echo "directory json is empty" ; else cp -R json/*   /tmp/purl-eu-generated/report ; fi fi
-            if [ -d examples ] ; then if [ ! "$(ls -A examples)" ] ; then echo "directory examples is empty" ; else cp -R examples/* /tmp/purl-eu-generated/examples ; fi fi
+            mkdir -p /tmp/generated/report
+            if [ -d target ] ; then if [ ! "$(ls -A target)" ] ; then echo "directory target is empty" ; else pushd target ; cp -r * /tmp/generated/ ; popd ; fi fi
+            if [ -d report ] ; then if [ ! "$(ls -A report)" ] ; then echo "directory report is empty" ; else cp -rT report /tmp/generated/report/ ; fi fi
+            if [ -d reporthtml ] ; then if [ ! "$(ls -A reporthtml)" ] ; then echo "directory reporthtml is empty" ; else cp -rT reporthtml /tmp/generated/report/ ; fi fi
+            if [ -d json ] ; then if [ ! "$(ls -A json)" ] ; then echo "directory json is empty" ; else cp -rT json /tmp/generated/report/ ; fi fi
+            if [ -d examples ] ; then if [ ! "$(ls -A examples)" ] ; then echo "directory examples is empty" ; else cp -rT examples /tmp/generated/examples/ ; fi fi
       - run:
           name: List the files which have been created
+          workdir: /tmp/generated
           command: |
-            ls -al /tmp/purl-eu-generated/*
-            if [ -d /tmp/purl-eu-generated/report ] ; then if [ ! "$(ls -A /tmp/purl-eu-generated/report)" ] ; then echo "directory target is empty" ; else ls -al /tmp/purl-eu-generated/report/* ; fi fi
-            find /tmp/purl-eu-generated/report
+            ls -al *
+            if [ -d report ] ; then ls -al report/* || ls -al report ; fi
+            find report
       - run:
           name: insert the commit
+          workdir: /tmp/generated
           command: |
             export TAG=`echo "${CIRCLE_SHA1}" | cut -c1-15`
-            echo "{\"commit\" : \"$TAG\"}" > /tmp/purl-eu-generated/report/commit.json
+            echo "{\"commit\" : \"$TAG\"}" > report/commit.json
       - run:
           name: Push results to github
-          workdir: /tmp/purl-eu-generated
+          workdir: /tmp/generated
           command: |
             git config user.email "builder@purl.eu"
             git config user.name "Circle CI Builder"
@@ -444,7 +521,15 @@ workflows:
   version: 2
   generate_documentation:
     jobs:
-      - checkout
+      - checkout:
+          test_branch: test
+          production_branch: production
+          other_folder: dev
+          test_folder: test
+          production_folder: production
+          other_hostname: $$DEVHOSTNAME
+          test_hostname: $$TESTHOSTNAME
+          production_hostname: $$PRODHOSTNAME
       - extract-jsonld-details:
           requires:
             - checkout
@@ -496,5 +581,6 @@ workflows:
             - render-context-details
             - render-voc-rdf
       - create-artifact:
+          repository: $$GITURL-GENERATEDREPO
           requires:
             - expand-links
