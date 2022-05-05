@@ -527,9 +527,9 @@ workflows:
           other_folder: dev
           test_folder: test
           production_folder: production
-          other_hostname: $$DEVHOSTNAME
-          test_hostname: $$TESTHOSTNAME
-          production_hostname: $$PRODHOSTNAME
+          other_hostname: https://dev.purl.eu
+          test_hostname: https://test.purl.eu
+          production_hostname: https://purl.eu
       - extract-jsonld-details:
           requires:
             - checkout
@@ -581,6 +581,6 @@ workflows:
             - render-context-details
             - render-voc-rdf
       - create-artifact:
-          repository: $$GITURL-GENERATEDREPO
+          repository: git@github.com:Informatievlaanderen/purl-eu-generated.git
           requires:
             - expand-links
