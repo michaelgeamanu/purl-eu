@@ -12,7 +12,7 @@
     "name": "OSLO-PassengerTransportHubs-VOC",
     "filename": "config/passenger-transport-hubs-voc.json",
     "navigation": {},
-    "disabled" :  true,
+    "disabled" :  false,
     "dummy": "4"
   },
 {
@@ -28,7 +28,7 @@
     "name": "OSLO-PassengerTransportHubs-AP",
     "filename": "config/passenger-transport-hubs-ap.json",
     "navigation": {},
-    "disabled" :  true,
+    "disabled" :  false,
     "dummy": "3"
   },
   {
