@@ -3,7 +3,7 @@
     "urlref": "/ns/mobility/passenger-transport-hubs/",
     "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "voc",
-    "disabled": false,
+    "disabled": true,
     "dummy": "18"
   },
   {
@@ -12,14 +12,14 @@
     "branchtag": "master",
     "name": "OSLO-PassengerTransportHubs-VOC",
     "filename": "config/passenger-transport-hubs-voc.json",
-    "disabled": false,
+    "disabled": true,
     "dummy": "18"
   },
 {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
     "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "ap",
-    "disabled": false,
+    "disabled": true,
     "dummy": "18"
   },
   {
@@ -28,7 +28,7 @@
     "branchtag": "master",
     "name": "OSLO-PassengerTransportHubs-AP",
     "filename": "config/passenger-transport-hubs-ap.json",
-    "disabled": false,
+    "disabled": true,
     "dummy": "18"
   },
   {
