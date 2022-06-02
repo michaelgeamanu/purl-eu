@@ -6,7 +6,7 @@
     "branchtag": "master",
     "name": "OSLO-PassengerTransportHubs-VOC",
     "filename": "config/passenger-transport-hubs-voc.json",
-    "disabled": true,
+    "disabled": false,
     "dummy": "18"
   },
 
@@ -16,7 +16,7 @@
     "branchtag": "master",
     "name": "OSLO-PassengerTransportHubs-AP",
     "filename": "config/passenger-transport-hubs-ap.json",
-    "disabled": true,
+    "disabled": false,
     "dummy": "18"
   },
   {
