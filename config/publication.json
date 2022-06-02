@@ -15,13 +15,7 @@
     "disabled": true,
     "dummy": "18"
   },
-{
-    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
-    "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
-    "type": "ap",
-    "disabled": true,
-    "dummy": "18"
-  },
+
   {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
