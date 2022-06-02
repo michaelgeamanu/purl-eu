@@ -1,5 +1,11 @@
 [
-  
+  {
+    "urlref": "/ns/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "type": "voc",
+    "disabled": true,
+    "dummy": "20"
+  },
   {
     "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
@@ -7,9 +13,15 @@
     "name": "OSLO-PassengerTransportHubs-VOC",
     "filename": "config/passenger-transport-hubs-voc.json",
     "disabled": false,
-    "dummy": "18"
+    "dummy": "20"
   },
-
+  {
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "type": "ap",
+    "disabled": true,
+    "dummy": "20"
+  },
   {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
@@ -17,7 +29,7 @@
     "name": "OSLO-PassengerTransportHubs-AP",
     "filename": "config/passenger-transport-hubs-ap.json",
     "disabled": false,
-    "dummy": "18"
+    "dummy": "20"
   },
   {
     "urlref": "/ns/mobility/timetables-and-planning/",
