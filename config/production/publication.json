@@ -3,7 +3,7 @@
     "urlref": "/ns/mobility/passenger-transport-hubs/",
     "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "voc",
-    "disabled": false,
+    "prefix" : "mobility",
     "dummy": "38"
   },
   {
@@ -11,9 +11,9 @@
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
     "branchtag": "master",
     "name": "passenger-transport-hubs",
+    "prefix" : "mobility",
     "filename": "config/passenger-transport-hubs-voc.json",
     "navigation": {},
-    "disabled": false,
     "dummy": "36"
   },
   {
