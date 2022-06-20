@@ -3,7 +3,7 @@
   "otherLanguages": [
     "fr", "de"
   ],
-  "hostname": "https://purl.eu/",
+  "hostname": "https://purl.eu",
   "domain": "purl.eu",
   "publicationpoints" : ["dev"],
   "generatedrepository" : {
