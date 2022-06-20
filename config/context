@@ -1,5 +1,6 @@
 {
   "@context": {
+    "vlaanderen": "http://data.vlaanderen.be/ns/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "void": "http://rdfs.org/ns/void#",
     "dcterms": "http://purl.org/dc/terms/",
@@ -89,7 +90,7 @@
       "@id": "rdfs:seeAlso"
     },
     "usage": {
-      "@id": "skos:scopeNote",
+      "@id": "vann:usageNote",
       "@container": "@language"
     },
     "parents" :{

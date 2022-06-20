@@ -1,23 +1,28 @@
-# Documentation of a publication environment for semantic specifications.
+# purl.eu
 
-Semantic specifications are documents that formalize data models according to semantic web principles. 
-This repository is the root repository for a publication environment for semantic specifications. 
-The semantic specifications are created using the corresponding toolchain.
+[https://purl.eu](https://purl.eu) is deployed and operated using the design documented below.
 
 
-## Creating semantic specifications
 
-The toolchain is elaborated in this repository https://github.com/Informatievlaanderen/OSLO-toolchain.
-
-
-## Deployment process
+# Publication environment operational architecture
 
 The publication environment has been setup to minimize the rollout and maintenance effort of any change to the system in a predicatable way. 
+Whereas most of the configuration in this repository has to do with the way how the artifact generation process is done,
+this documentation describes the publication environment that will consume the generated repository.
+
+The usage of this environment is optional, but since the design of the publication environment is done to automate the complete flow from editor to publication it is relevant to add this documentation.
+
+The components of this setup are also available on request at https://data.vlaanderen.be. 
+They are build on Open Source software.
+
+
+## Deployment operational design 
+
 The figure below shows the four layers of the environment. 
 
 ![The process](update-process.jpg)
 
-The bottom layer is the cloud infrastructure. For the setup at the Flemish Government Data.vlaanderen.be this is [Azure](https://azure.microsoft.com/). 
+The bottom layer is the cloud infrastructure. For https://data.vlaanderen.be this is [Azure](https://azure.microsoft.com/). 
 
 On top of that, the infrastructure is deployed. The infrastructure is setup using [Terraform](https://www.terraform.io/). 
 The terraform configuration describes a [docker swarm](https://github.com/docker/swarm) setup.
@@ -37,13 +42,13 @@ and will be retrieved by querying them. But other data such as the static html p
 poll for changes; when a change is detected the existing data of the service is replaced. Content editors hence follow the same approach as
 the software development.
 
-## The application architecture
+## The application component architecture
 
-The resulting application is depicted in the figure below. 
+The application component architecture is depicted in the figure below. 
 
 ![Current Architecture](huidige-architectuur.jpg)
 
-At the infracture layer, descriped by a terraform description,  we have setup a loadbalancer. It is the entrypoint for all 
+At the infracture layer, descriped by a terraform description,  there has been setup a loadbalancer. It is the entrypoint for all 
 traffic between the external world (the Internet) and the internal services.
 To run the services a cluster of 4 nodes has been created. 
 It consists of 3 master nodes and 1 larger worker node. 
@@ -73,9 +78,17 @@ The html subjectpage renderer itself is a complicated setup, consisting of serve
 
 ![html renderer](html-subjectpagina-rendering.jpg)
 
-Its implementation is based on the mu.semte.ch ecosystem. Using the mu.resources service, for a given resource, the RDF data is retrieved from the 
-SPARQL endpoint and turned into a JSON-API compliant representation. The JSON-API resource api is used in an Ember.js app to create the subject pages.
+Its implementation is based on the [mu.semte.ch ecosystem](https://github.com/mu-semtech). Using the mu.resources service, for a given resource, the RDF data is retrieved from the 
+SPARQL endpoint and turned into a JSON-API compliant representation. The JSON-API resource api is used in by Single Page Application to create the subject pages.
 For each resource type (e.g. Address, Building, Organisation) a mu.resources configuration has to be made.
 
+An experimental artifact generators for this ecosystem is set available at [mu.semte.ch configuration generator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/blob/multigual-dev/mu-config-generator.js).
 
+
+## Maintenance experience
+
+The same configuration has been operational since 2019.
+During that period the operational maintenance of the services required minimal human intervention, while still new services where upgraded, reconfigured, etc. 
+When downtime was reported, it never occurred that the whole website was down, but that due to the decomponsition in (micro)services the site alwyas at least partially available.
+It shows that this way of working allowed to keep the operational costs close to the cloud provisioning costs.
 
