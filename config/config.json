@@ -5,7 +5,7 @@
   ],
   "hostname": "https://purl.eu",
   "domain": "purl.eu",
-  "publicationpoints" : ["dev"],
+  "publicationpoints" : ["production"],
   "generatedrepository" : {
 	  "organisation": "informatievlaanderen",
 	  "repository" : "purl.eu-generated",
