@@ -4,7 +4,7 @@
     "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "voc",
     "prefix" : "mobility",
-    "dummy": "42"
+    "dummy": "43"
   },
   {
     "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
@@ -14,14 +14,14 @@
     "prefix" : "mobility",
     "filename": "config/passenger-transport-hubs-voc.json",
     "navigation": {},
-    "dummy": "42"
+    "dummy": "43"
   },
   {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
     "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "ap",
     "disabled": false,
-    "dummy": "42"
+    "dummy": "43"
   },
   {
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
@@ -31,7 +31,7 @@
     "filename": "config/passenger-transport-hubs-ap.json",
     "navigation": {},
     "disabled": false,
-    "dummy": "42"
+    "dummy": "43"
 
   },
   {
