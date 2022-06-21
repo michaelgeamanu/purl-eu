@@ -20,7 +20,7 @@
     "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
     "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "type": "ap",
-    "disabled": true,
+    "disabled": false,
     "dummy": "38"
   },
   {
