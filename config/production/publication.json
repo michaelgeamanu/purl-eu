@@ -38,61 +38,61 @@
     "urlref": "/ns/mobility/timetables-and-planning/",
     "seealso": "/doc/vocabulary/mobility/timetables-and-planning/recommended-standard/2022-04-21",
     "type": "voc",
-    "dummy": "dimi-6"
+    "dummy": "dimi-7"
   },
   {
     "urlref": "/doc/vocabulary/mobility/timetables-and-planning/recommended-standard/2022-04-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
-    "branchtag": "master",
+    "branchtag": "erkend-2022-04-21",
     "name": "timetables-and-planning-voc",
     "filename": "config/OSLO-TimetablesAndPlanning-VOC.json",
     "navigation": {},
-    "dummy": "dimi-6"
+    "dummy": "dimi-7"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/",
-    "seealso": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
+    "seealso": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2022-04-21",
     "type": "ap",
-    "dummy": "dimi-12"
+    "dummy": "dimi-14"
   },
   {
-    "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2021-06-01",
+    "urlref": "/doc/applicationprofile/netex-belgium/vehiclescheduling-ap/working-draft/2022-04-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "vehiclescheduling-ap",
-    "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
+    "filename": "config/NeTEx-Belgium-AP.json",
     "navigation": {},
-    "dummy": "dimi-12"
+    "dummy": "dimi-14"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/",
-    "seealso": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-06-01",
+    "seealso": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2022-04-21",
     "type": "ap",
-    "dummy": "dimi-13"
+    "dummy": "dimi-14"
   },
   {
-    "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2021-06-01",
+    "urlref": "/doc/applicationprofile/netex-belgium/stopplaces-ap/working-draft/2022-04-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "stopplaces-ap",
-    "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
+    "filename": "config/NeTEx-Belgium-AP.json",
     "navigation": {},
-    "dummy": "dimi-13"
+    "dummy": "dimi-14"
   },
   {
     "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/",
-    "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
+    "seealso": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2022-04-21",
     "type": "ap",
-    "dummy": "dimi-12"
+    "dummy": "dimi-14"
   },
   {
-    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2021-06-01",
+    "urlref": "/doc/applicationprofile/netex-belgium/timetables-ap/working-draft/2022-04-21",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-mobiliteitDienstregelingEnPlanning",
     "branchtag": "master",
     "name": "timetables-ap",
-    "filename": "config/OSLO-mobiliteitDienstregelingEnPlanning-AP.json",
+    "filename": "config/NeTEx-Belgium-AP.json",
     "navigation": {},
-    "dummy": "dimi-12"
+    "dummy": "dimi-14"
   },
   {
     "urlref": "/doc/vocabulary/air-and-water/core/kandidaatstandaard/2021-10-01",
