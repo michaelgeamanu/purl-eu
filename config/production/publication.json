@@ -1,38 +1,65 @@
 [
   {
-    "urlref": "/ns/mobility/passenger-transport-hubs/",
-    "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
-    "type": "voc",
-    "prefix" : "mobility",
-    "dummy": "51"
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
+    "branchtag": "ontwerp-2022-05-01",
+    "name": "OSLO-PassengerTransportHubs-AP",
+    "filename": "config/passenger-transport-hubs-ap.json",
+    "navigation": {
+      "next": "/doc/applicationprofile/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11"
+    },
+    "disabled": false,
+    "dummy": "1"
+  },
+  {
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11",
+    "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
+    "branchtag": "kandidaat-2022-07-11_01",
+    "name": "OSLO-PassengerTransportHubs-AP",
+    "filename": "config/passenger-transport-hubs-ap.json",
+    "navigation": {
+      "prev": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01"
+    },
+    "disabled": false,
+    "dummy": "1"
+  },
+  {
+    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11",
+    "type": "ap",
+    "disabled": false,
+    "dummy": "1"
   },
   {
     "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
-    "branchtag": "master",
+    "branchtag": "ontwerp-2022-05-01",
     "name": "passenger-transport-hubs",
-    "prefix" : "mobility",
+    "prefix": "mobility",
     "filename": "config/passenger-transport-hubs-voc.json",
-    "navigation": {},
-    "dummy": "51"
+    "navigation": {
+      "next": "/doc/vocabulary/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11"
+    },
+    "dummy": "1"
   },
   {
-    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/",
-    "seealso": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
-    "type": "ap",
-    "disabled": false,
-    "dummy": "51"
-  },
-  {
-    "urlref": "/doc/applicationprofile/mobility/passenger-transport-hubs/working-draft/2022-05-01",
+    "urlref": "/doc/vocabulary/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11",
     "repository": "https://github.com/Informatievlaanderen/OSLOthema-passengerTransportHubs",
-    "branchtag": "master",
-    "name": "OSLO-PassengerTransportHubs-AP",
-    "filename": "config/passenger-transport-hubs-ap.json",
-    "navigation": {},
-    "disabled": false,
-    "dummy": "51"
-
+    "branchtag": "kandidaat-2022-07-11_01",
+    "name": "passenger-transport-hubs",
+    "prefix": "mobility",
+    "filename": "config/passenger-transport-hubs-voc.json",
+    "navigation": {
+      "prev": "/doc/vocabulary/mobility/passenger-transport-hubs/working-draft/2022-05-01"
+    },
+    "dummy": "1"
+  },
+  {
+    "urlref": "/ns/mobility/passenger-transport-hubs/",
+    "seealso": "/doc/vocabulary/mobility/passenger-transport-hubs/kandidaatstandaard/2022-07-11",
+    "type": "voc",
+    "prefix": "mobility",
+    "dummy": "1"
   },
   {
     "urlref": "/ns/mobility/timetables-and-planning/",
@@ -100,7 +127,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "core",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"029"
+    "dummy": "029"
   },
   {
     "urlref": "/doc/vocabulary/air-and-water/air/kandidaatstandaard/2021-10-01",
@@ -108,7 +135,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "air",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"023"
+    "dummy": "023"
   },
   {
     "urlref": "/doc/vocabulary/air-and-water/water/kandidaatstandaard/2021-10-01",
@@ -116,7 +143,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "water",
     "filename": "config/OSLO-AirAndWater-VOC.json",
-    "dummy":"023"
+    "dummy": "023"
   },
   {
     "urlref": "/doc/applicationprofile/AirAndWater/Core/kandidaatstandaard/2021-10-01",
@@ -124,7 +151,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "OSLO-airAndWater-Core-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
-    "dummy":"052",
+    "dummy": "052",
     "navigation": {
       "prev": "/doc/applicationprofile/AirAndWater/Core/ontwerpstandaard/2021-04-16"
     }
@@ -135,7 +162,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "OSLO-airAndWater-Air-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
-    "dummy":"033",
+    "dummy": "033",
     "navigation": {
       "prev": "/doc/applicationprofile/AirAndWater/Air/ontwerpstandaard/2021-04-16"
     }
@@ -146,7 +173,7 @@
     "branchtag": "kandidaat-2021-10-01-1",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-AP.json",
-    "dummy":"038",
+    "dummy": "038",
     "navigation": {
       "prev": "/doc/applicationprofile/AirAndWater/Water/ontwerpstandaard/2021-04-16"
     }
@@ -157,7 +184,7 @@
     "branchtag": "2021-04-16-1",
     "name": "OSLO-airAndWater-Core-ap",
     "filename": "config/OSLO-AirAndWater-Core-AP.json",
-    "dummy":"002",
+    "dummy": "002",
     "navigation": {
       "next": "/doc/applicationprofile/AirAndWater/Core/kandidaatstandaard/2021-10-01"
     }
@@ -168,7 +195,7 @@
     "branchtag": "2021-04-16-1",
     "name": "OSLO-airAndWater-Air-ap",
     "filename": "config/OSLO-AirAndWater-Air-AP.json",
-    "dummy":"002",
+    "dummy": "002",
     "navigation": {
       "next": "/doc/applicationprofile/AirAndWater/Air/kandidaatstandaard/2021-10-01"
     }
@@ -179,7 +206,7 @@
     "branchtag": "2021-04-16-1",
     "name": "OSLO-airAndWater-Water-ap",
     "filename": "config/OSLO-AirAndWater-Water-AP.json",
-    "dummy":"002",
+    "dummy": "002",
     "navigation": {
       "next": "/doc/applicationprofile/AirAndWater/Water/kandidaatstandaard/2021-10-01"
     }
@@ -190,7 +217,7 @@
     "branchtag": "kandidaat-2022-02-23-01",
     "name": "OSLO-consent-ap",
     "filename": "config/consent-ap.json",
-    "dummy":"041"
+    "dummy": "041"
   },
   {
     "urlref": "/doc/applicationprofile/consent/",
@@ -204,7 +231,7 @@
     "branchtag": "kandidaat-2022-02-23-01",
     "name": "OSLO-consent-voc",
     "filename": "config/consent-voc.json",
-    "dummy":"029"
+    "dummy": "029"
   },
   {
     "urlref": "/ns/consent/",
@@ -256,6 +283,6 @@
     "filename": "config/iceg-public-organisation-voc.json",
     "navigation": {},
     "disabled": true,
-    "dummy":"016"
+    "dummy": "016"
   }
 ]
