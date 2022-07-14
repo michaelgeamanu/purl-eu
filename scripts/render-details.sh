@@ -135,8 +135,8 @@ render_html() { # SLINE TLINE JSON
     LANGUAGEFILENAMEJSONLD=$(jq -r "${COMMANDJSONLD}" ${SLINE}/.names.json)
     if [ "${LANGUAGEFILENAMEJSONLD}" == "" ] ; then
 	    echo "configuration for language ${GOALLANGUAGE} not present. Ignore this language for ${SLINE}"
-    else 
-	
+    else
+
     MERGEDJSONLD=${RRLINE}/translation/${LANGUAGEFILENAMEJSONLD}
 
     echo "RENDER-DETAILS(language html): node /app/html-generator2.js -s ${TYPE} -i ${MERGEDJSONLD} -x ${RLINE}/html-nj_${LANGUAGE}.json -r /${DROOT} -t ${TEMPLATELANG} -d ${SLINE}/templates -o ${OUTPUT} -m ${LANGUAGE} -e ${RRLINE}"
@@ -252,8 +252,8 @@ render_context() { # SLINE TLINE JSON
         LANGUAGEFILENAMEJSONLD=$(jq -r "${COMMANDJSONLD}" ${SLINE}/.names.json)
 	if [ "${LANGUAGEFILENAMEJSONLD}" == "" ] ; then
 	    echo "configuration for language ${GOALLANGUAGE} not present. Ignore this language for ${SLINE}"
-        else 
-	
+        else
+
         MERGEDJSONLD=${RLINE}/translation/${LANGUAGEFILENAMEJSONLD}
 
         echo "RENDER-DETAILS(context-language-aware): node /app/json-ld-generator2.js -d -l label -i ${MERGEDJSONLD} -o ${TLINE}/context/${OUTFILELANGUAGE} -m ${GOALLANGUAGE}"
@@ -269,7 +269,7 @@ render_context() { # SLINE TLINE JSON
 		cp ${TLINE}/context/${OUTFILELANGUAGE} ${TLINE}/context/${OUTFILE}
 	fi
 
-	fi 
+	fi
     fi
 }
 
@@ -322,11 +322,11 @@ render_shacl_languageaware() {
 
     if [ "${LANGUAGEFILENAMEJSONLD}" == "" ] ; then
 	    echo "configuration for language ${GOALLANGUAGE} not present. Ignore this language for ${SLINE}"
-    else 
+    else
 
     MERGEDJSONLD=${RLINE}/translation/${LANGUAGEFILENAMEJSONLD}
-    OUTFILE=${TLINE}/shacl/${FILENAME}-SHACL_${GOALLANGUAGE}.jsonld
-    OUTREPORT=${RLINE}/shacl/${FILENAME}-SHACL_${GOALLANGUAGE}.report
+    OUTFILE=${TLINE}/shacl/${FILENAME}_${GOALLANGUAGE}-SHACL.jsonld
+    OUTREPORT=${RLINE}/shacl/${FILENAME}_${GOALLANGUAGE}-SHACL.report
 
     BASENAME=$(basename ${JSONI} .jsonld)
 
@@ -398,49 +398,49 @@ cat ${CHECKOUTFILE} | while read line; do
                 RLINE=${TARGETDIR}/reporthtml/${line}
                 mkdir -p ${RLINE}
                 render_html $SLINE $TLINE $i $RLINE ${line} ${TARGETDIR}/report/${line} ${PRIMELANGUAGE} true
-		for g in ${GOALLANGUAGE} 
-		do 
+		for g in ${GOALLANGUAGE}
+		do
                 render_html $SLINE $TLINE $i $RLINE ${line} ${TARGETDIR}/report/${line} ${g}
 	        done
                 ;;
             shacl) # render_shacl $SLINE $TLINE $i $RLINE
                 render_shacl_languageaware $SLINE $TLINE $i $RLINE ${line} ${PRIMELANGUAGE} true
-		for g in ${GOALLANGUAGE} 
-		do 
+		for g in ${GOALLANGUAGE}
+		do
                 render_shacl_languageaware $SLINE $TLINE $i $RLINE ${line} ${g}
 	        done
                 ;;
             context)
                 render_context $SLINE $TLINE $i $RLINE ${PRIMELANGUAGE} true
-		for g in ${GOALLANGUAGE} 
-		do 
-                render_context $SLINE $TLINE $i $RLINE ${g} 
+		for g in ${GOALLANGUAGE}
+		do
+                render_context $SLINE $TLINE $i $RLINE ${g}
 	        done
                 ;;
             multilingual)
-		for g in ${GOALLANGUAGE} 
-		do 
+		for g in ${GOALLANGUAGE}
+		do
                 render_translationfiles ${PRIMELANGUAGE} ${g} $i ${SLINE} ${TRLINE}
 	        done
                 render_translationfiles ${PRIMELANGUAGE} ${PRIMELANGUAGE} $i ${SLINE} ${TRLINE}
                 ;;
             merge)
                 render_merged_files $i ${PRIMELANGUAGE} ${SLINE} ${TRLINE} ${RLINE}
-		for g in ${GOALLANGUAGE} 
+		for g in ${GOALLANGUAGE}
 	        do
                 render_merged_files $i ${g} ${SLINE} ${TRLINE} ${RLINE}
 	        done
                 ;;
             report)
                 write_report $i ${PRIMELANGUAGE} ${SLINE} ${TRLINE} ${RLINE}
-		for g in ${GOALLANGUAGE} 
+		for g in ${GOALLANGUAGE}
 		do
                 write_report $i ${g} ${SLINE} ${TRLINE} ${RLINE}
 	        done
                 ;;
             example)
                 render_example_template $SLINE $TLINE $i $RLINE ${line} ${TARGETDIR}/report/${line} ${PRIMELANGUAGE}
-		for g in ${GOALLANGUAGE} 
+		for g in ${GOALLANGUAGE}
 		do
                 render_example_template $SLINE $TLINE $i $RLINE ${line} ${TARGETDIR}/report/${line} ${g}
 	        done

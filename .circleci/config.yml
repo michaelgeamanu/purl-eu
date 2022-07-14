@@ -318,7 +318,6 @@ jobs:
           name: List the shacl files found
           command: |
             find /tmp/workspace/target -name \*-SHACL.jsonld -type f
-            find /tmp/workspace/target -name \*-SHACL_??.jsonld -type f
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
@@ -340,12 +339,10 @@ jobs:
           name: Convert -SHACL.jsonld file to -SHACL.ttl files
           command: |
             find /tmp/workspace/target -name \*-SHACL.jsonld -type f | $PWD/scripts/convert_to_any.sh turtle
-            find /tmp/workspace/target -name \*-SHACL_??.jsonld -type f | $PWD/scripts/convert_to_any.sh turtle
       - run:
           name: List the -SHACL.ttl and context files found
           command: |
             if [ -d /tmp/workspace/target ] ; then find /tmp/workspace/target -name \*-SHACL.ttl -type f ; fi
-            if [ -d /tmp/workspace/target ] ; then find /tmp/workspace/target -name \*-SHACL_??.ttl -type f ; fi
             if [ -d /tmp/workspace/target ] ; then find /tmp/workspace/target -name \*.ttl -type f ; fi
       - persist_to_workspace:
           root: /tmp/workspace
